@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<job maxFilesPerProcess="1" filesPerHour="60" fileListSyntax="paths" simulateSubmission="false">
+	<command>
+		starver dev
+
+		root4star -b -q -l 'make.C( "'$FILELIST'", "'$JOBINDEX'.root" )' $JOBINDEX &gt;&amp; log_$JOBINDEX.log
+	</command>
+
+	<stdout URL="file:/star/data03/pwg/jdb/scratch/log/$JOBID.out" />
+	<stderr URL="file:/star/data03/pwg/jdb/scratch/log/$JOBID.err" />
+	<input URL="filelist:/star/u/jdb/work/StVpdPicoDstMaker/mtd2.lis" nFiles="5000"/>
+	    <output fromScratch="*" toURL="file:/star/data03/pwg/jdb/scratch/" />
+	<SandBox>
+ 		<Package>
+ 			<File>file:./make.C</File>
+ 			<File>file:./.sl64_gcc482/</File> 
+ 		</Package> 
+ 	</SandBox>
+
+	<Generator> 
+ 		<Location>/star/data03/pwg/jdb/scratch/gen</Location> 
+ 	</Generator> 
+</job>

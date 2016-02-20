@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+    <job>StVertexQAPicoMaker</job>
+
+    <Triggers></Triggers>
+
+    <Histograms>
+        <Histo name="vZ" title="vertex Z;[cm]; dN/dvZ" xBins="Bins.vZ"/>
+        <Histo name="vX_vY" title="vertex X vs. vertexY; [cm]; [cm]" xBins="Bins.vX" yBins="Bins.vY"/>
+        <Histo name="vR" title="vertex R; [cm];dN/dvR" xBins="Bins.vR"/>
+    </Histograms>
+
+
+    <Bins>
+        <vZ width="0.5" min="-70" max="70" />
+        <vX width="0.1" min="-2" max="2" />
+        <vY width="0.1" min="-2" max="2" />
+        <vR width="0.05" min="0" max="4" />
+    </Bins>
+
+</config>

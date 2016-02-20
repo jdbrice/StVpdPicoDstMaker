@@ -1,0 +1,10 @@
+
+
+*.o
+*.lis
+*.dataset
+*.session.xml
+*.root
+._*
+temp_gccflags.c
+.sl64_gcc482
